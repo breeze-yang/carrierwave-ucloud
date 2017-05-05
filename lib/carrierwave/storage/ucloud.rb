@@ -114,7 +114,6 @@ module CarrierWave
 
           @conn = Faraday.new(url: @uploader.ucloud_bucket_host) do |req|
             req.request :url_encoded
-            req.response :logger
             req.adapter Faraday.default_adapter
           end
         end
